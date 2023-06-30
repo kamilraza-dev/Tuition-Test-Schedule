@@ -21,13 +21,65 @@ function displayClassNine(){
     const downloadBtn = document.getElementById('download-button');
     downloadBtn.style.display = 'block'
 
-    createTest( 'Test 1', 'Monday', '03-07-2023', 'Physics', 'Chap#1 (Complete), Chap#2 (only equations of motion)');
-createTest( 'Test 2', 'Wednesday', '05-07-2023', 'Physics', 'Chap#2 (All Remaning) with Numericals, Chap#3 (Complete)');
-createTest( 'Test 3', 'Friday', '07-07-2023', 'Grammar', 'Articles and Do as Directed (All Tenses)');
-createTest( 'Test 4', 'Saturday', '08-07-2023', 'Chemistry', 'Chap#2 (All covered topics)');
-createTest( 'Test 5', 'Monday', '10-07-2023', 'Mathematics', 'Chap#1 (Exercise#1.6 [Q4 and 5] ), Chap#2 (Exercise#2.6)');
-createTest( 'Test 6', 'Wednesday', '12-07-2023', 'Mathematics', 'Chap#2 (remaining), Chap#6 (All covered topics)');
-createTest( 'Test 7', 'Friday', '14-07-2023', 'Chemistry', 'Chap#1 (Complete) with Numericals');
+    const timeTable = document.getElementById('table-container');
+    timeTable.innerHTML = `<table>
+    <tr>
+        <th>DAY</th>
+        <th>DATE</th>
+        <th>SUBJECT</th>
+        <th>TOPIC</th>
+    </tr>
+    <tr>
+        <td>Monday</td>
+        <td>03-07-2023</td>
+        <td>Physics</td>
+        <td class="last-cell">Chap#1 (Complete), Chap#2 (only equations of motion)</td>
+    </tr>
+    <tr>
+        <td>Wednesday</td>
+        <td>05-07-2023</td>
+        <td>Physics</td>
+        <td class="last-cell">Chap#2 (All Remaning) with Numericals, Chap#3 (Complete)</td>
+    </tr>
+    <tr>
+        <td>Friday</td>
+        <td>07-07-2023</td>
+        <td>Grammar</td>
+        <td class="last-cell">Articles and Do as Directed (All Tenses)</td>
+    </tr>
+    <tr>
+        <td>Saturday</td>
+        <td>08-07-2023</td>
+        <td>Chemistry</td>
+        <td class="last-cell">Chap#2 (All covered topics)</td>
+    </tr>
+    <tr>
+        <td>Monday</td>
+        <td>10-07-2023</td>
+        <td>Mathematics</td>
+        <td class="last-cell">Chap#1 (Exercise#1.6 [Q4 and 5] ), Chap#2 (Exercise#2.6)</td>
+    </tr>
+    <tr>
+        <td>Wednesday</td>
+        <td>12-07-2023</td>
+        <td>Mathematics</td>
+        <td class="last-cell">Chap#2 (remaining), Chap#6 (All covered topics)</td>
+    </tr>
+    <tr>
+        <td>Friday</td>
+        <td>14-07-2023</td>
+        <td>Chemistry</td>
+        <td class="last-cell">Chap#1 (Complete) with Numericals</td>
+    </tr>
+</table>`
+}
+
+function displayClassTen(){
+    const downloadBtn = document.getElementById('download-button');
+    downloadBtn.style.display = 'none'
+
+    const tableContainer = document.getElementById('table-container');
+    tableContainer.innerHTML =  `<h4 style="text-align: center; color: red;">"Your Time Table not Uploaded. It will upload soon"</h4>`;
 }
 
 function downloadTable() {
