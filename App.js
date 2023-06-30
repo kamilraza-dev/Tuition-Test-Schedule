@@ -77,9 +77,10 @@ function displayClassNine(){
 function displayClassTen(){
     const downloadBtn = document.getElementById('download-button');
     downloadBtn.style.display = 'none'
-
+    
     const tableContainer = document.getElementById('table-container');
-    tableContainer.innerHTML =  `<h4 style="text-align: center; color: red;">"Your Time Table not Uploaded. It will upload soon"</h4>`;
+    tableContainer.innerHTML =  `<h4 style="text-align: center; color: red;">"Your Time Table not Uploaded. It will upload soon"</h4><a href="https://wa.me/923196995115">To Contact Admin Click Here</a>`;
+
 }
 
 function downloadTable() {
