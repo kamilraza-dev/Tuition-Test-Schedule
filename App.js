@@ -18,10 +18,15 @@ function createTest(testNo, day, date, sub, topics){
 
 function displayClassNine(){
 
-    const downloadBtn = document.getElementById('download-button');
-    downloadBtn.style.display = 'block'
+    const downloadBtn10 = document.getElementById('download-button-10');
+    downloadBtn10.style.display = 'none'
+    const tableContainer = document.getElementById('table-container-10');
+    tableContainer.innerHTML = '';
 
-    const timeTable = document.getElementById('table-container');
+    const downloadBtn9 = document.getElementById('download-button-9');
+    downloadBtn9.style.display = 'block'
+
+    const timeTable = document.getElementById('table-container-9');
     timeTable.innerHTML = `<table>
     <tr>
         <th>DAY</th>
@@ -75,23 +80,66 @@ function displayClassNine(){
 }
 
 function displayClassTen(){
-    const downloadBtn = document.getElementById('download-button');
-    downloadBtn.style.display = 'none'
-    
-    const tableContainer = document.getElementById('table-container');
-    tableContainer.innerHTML =  `<h4 style="text-align: center; color: red;">"Your Time Table not Uploaded. It will upload soon"</h4><a href="https://wa.me/923196995115">To Contact Admin Click Here</a>`;
+    const downloadBtn10 = document.getElementById('download-button-10');
+    downloadBtn10.style.display = 'block'
+
+    const downloadBtn9 = document.getElementById('download-button-9');
+    downloadBtn9.style.display = 'none'
+    const timeTable = document.getElementById('table-container-9');
+    timeTable.innerHTML = '';
+
+    const tableContainer = document.getElementById('table-container-10');
+    tableContainer.innerHTML =  `<table>
+    <tr>
+        <th>DAY</th>
+        <th>DATE</th>
+        <th>SUBJECT</th>
+        <th>TOPIC</th>
+    </tr>
+    <tr>
+        <td>Monday</td>
+        <td>03-07-2023</td>
+        <td>Mathematics</td>
+        <td class="last-cell">Chap#3 (Complete)</td>
+    </tr>
+    <tr>
+        <td>Tuesday</td>
+        <td>04-07-2023</td>
+        <td>Chemistry</td>
+        <td class="last-cell">All covered topics</td>
+    </tr>
+    <tr>
+        <td>Wednesday</td>
+        <td>05-07-2023</td>
+        <td>Physics</td>
+        <td class="last-cell">All covered topics</td>
+    </tr>
+    </table>`;
 
 }
 
-function downloadTable() {
-    const table = document.querySelector('.table-container');
+function downloadTable9() {
+    const table = document.getElementById('table-container-9');
     const opt = {
         margin: 1,
-        filename: 'table.pdf',
+        filename: 'Timetable Class 9.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
     html2pdf().set(opt).from(table).save();
 }
+
+function downloadTable10() {
+    const table = document.getElementById('table-container-10');
+    const opt = {
+        margin: 1,
+        filename: 'Timetable Class 10.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(table).save();
+}
+
 
