@@ -62,7 +62,7 @@ function displayClassNine(){
         <td>Monday</td>
         <td>10-07-2023</td>
         <td>Mathematics</td>
-        <td class="last-cell">Chap#1 (Exercise#1.6 [Q4 and 5] ), Chap#2 (Exercise#2.6)</td>
+        <td class="last-cell">Chap#1 (Exercise#1.6 [Q3 and 4] ), Chap#2 (Exercise#2.6)</td>
     </tr>
     <tr>
         <td>Wednesday</td>
